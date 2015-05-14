@@ -9,7 +9,7 @@ import scipy.stats as stats
 
 # Script settings
 normalization = True
-plotExample = False
+plotExample = True
 plotDifferences = False
 plotLinks = False
 plotPCA = False
@@ -27,7 +27,7 @@ data['female'] = [pd.read_table('data/female/'+f, delimiter=r"\s+", names=c).dro
 # Plot some cochleas
 if plotExample:
     ax = plt.axes(projection='3d')
-    for d in data['male'][3:10]:
+    for d in data['male'][3:4]:
         ax.scatter(d['x'], d['y'], d['z'], c = d['x']*d['y']*d['z'])
     plt.show()
 
