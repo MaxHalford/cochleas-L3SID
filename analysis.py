@@ -11,7 +11,7 @@ import scipy.stats as stats
 normalization = True
 plotExample = True
 plotDifferences = False
-plotLinks = False
+plotLinks = True
 plotPCA = False
 
 # Prepare the data
