@@ -15,3 +15,5 @@ Each link represents a significant distance. We built confidence intervals for b
 The R script and the Python script do pretty much the same, however the R one is commented in French whereas the Python one is in English
 
 The full report is available in French as a PDF in the folder.
+
+Sadly you will not be able to exactly reproduce the previous graphs and the ones in the report because they were done with restricted data. The files in the ``data`` folder are fake but they still work fine.

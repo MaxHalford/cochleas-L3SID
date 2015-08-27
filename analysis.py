@@ -10,7 +10,7 @@ import scipy.stats as stats
 # Script settings
 normalization = True
 plotExample = True
-plotDifferences = False
+plotDifferences = True
 plotLinks = True
 plotPCA = False
 
@@ -18,11 +18,15 @@ plotPCA = False
 data = {'male' : [], 'female' : []}
 maleFiles = [f for f in os.listdir(os.getcwd() + '/data/male/')]
 femaleFiles = [f for f in os.listdir(os.getcwd() + '/data/female/')]
-c = ['x', 'y', 'z']
+
+# Column names
+columns = ('index', 'x', 'y', 'z')
 
 # Read each file into a dataframe
-data['male'] = [pd.read_table('data/male/'+m, delimiter=r"\s+", names=c).dropna() for m in maleFiles]
-data['female'] = [pd.read_table('data/female/'+f, delimiter=r"\s+", names=c).dropna() for f in femaleFiles]
+data['male'] = [pd.read_csv('data/male/'+m, names=columns) for m in maleFiles]
+data['female'] = [pd.read_csv('data/female/'+f, names=columns) for f in femaleFiles]
+
+print(data['male'][0])
 
 # Plot some cochleas
 if plotExample:
